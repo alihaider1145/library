@@ -12,14 +12,19 @@ const myLibrary = [
         isRead: true,
     },
     {
-        author: 'The Alchemist',
-        title: 'Paulo Choelo',
+        author: 'Paulo Choelo',
+        title: 'The Alchemist',
         pages: 208,
         isRead: true,
     }
 ];
 
-const table = document.getElementsByClassName('library-table');
+const table = document.querySelector('.library-table');
+const tableBody = document.querySelector('.library-table tbody')
+
+console.log(document.querySelector('.library-table'));      // should be <table> element
+console.log(document.querySelector('.library-table tbody')); // should be <tbody> element
+
 
 
 function Book(author, title, pages, isRead, ID){
@@ -36,7 +41,7 @@ function addBookToLibrary(author, title, pages, isRead){
 }
 
 function displayBooks(){
-    // table.innerHTML = '';
+    tableBody.innerHTML = '';
 
     myLibrary.forEach((rowData)=>{
         const row = document.createElement('tr');
@@ -46,7 +51,7 @@ function displayBooks(){
             cell.textContent = cellData;
             row.appendChild(cell);
         });
-        table.appendChild(row);
+        tableBody.appendChild(row);
     });
 }
 
