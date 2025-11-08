@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>TOP Library</title>
+</head>
+    <div class="container">
+        <h1>Library</h1>
+        <p>
+            I made this The Odin Project Library project with forms / tables and JS object constructors.
+        </p>
+        <form action="library.backend">
+            <div class="author-box">
+                <label for="author">Author </label>
+                <input type="text" id="author">
+            </div>
+            <div class="title-box">
+                <label for="title">Title </label>
+                <input type="text" id="title">
+            </div>
+            <div class="pages-box">
+                <label for="pages">Pages </label>
+                <input type="number" id="pages">
+            </div>
+            <div class="isRead-box">
+                <label for="isRead">
+                    Read / Not Read 
+                    <input type="checkbox" id="isRead">
+                    <span class="custom-checkbox"></span>
+                </label>
+            </div>
+            <button form="submit" class="formBtn">ADD BOOK</button>
+        </form>
+
+        <table class="library-table">
+            <thead>
+                <tr>
+                    <th>Author</th>
+                    <th>Book Name</th>
+                    <th>Number of Pages</th>
+                    <th>Read/Not Read</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+    </div>
+</html>
