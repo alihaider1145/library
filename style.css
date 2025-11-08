@@ -140,4 +140,6 @@ input[type="checkbox"]:checked ~ .custom-checkbox:before {
 
 table{
     margin: auto;
+    border-spacing: 12px 16px;
 }
+
