@@ -4,18 +4,21 @@ const myLibrary = [
         title: 'Crime and Punishment',
         pages: 480,
         isRead: true,
+        ID: crypto.randomUUID(),
     },
     {
         author: 'Khaled Husseini',
         title: 'The Kite Runner',
         pages: 402,
         isRead: true,
+        ID: crypto.randomUUID(),
     },
     {
         author: 'Paulo Choelo',
         title: 'The Alchemist',
         pages: 208,
         isRead: true,
+        ID: crypto.randomUUID(),
     }
 ];
 
@@ -62,6 +65,13 @@ function displayBooks(){
 
         delBtn.addEventListener('mouseleave', ()=>{
             delBtn.style.backgroundColor = 'Red';
+        });
+
+        delBtn.addEventListener('click', (e)=>{
+            const delRowIndex = myLibrary.indexOf(rowData);
+            if(delRowIndex > -1)
+                myLibrary.splice(delRowIndex, 1);
+            e.target.parentNode.remove();
         });
 
         row.appendChild(delBtn);
