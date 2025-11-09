@@ -41,12 +41,31 @@ function displayBooks(){
 
     myLibrary.forEach((rowData)=>{
         const row = document.createElement('tr');
-        let rowArr = Object.values(rowData); // converts the row obj to arr
+        let rowArr = Object.values(rowData).slice(0,4); // converts the row obj to arr
         rowArr.forEach((cellData)=>{
             const cell = document.createElement('td')
             cell.textContent = cellData;
             row.appendChild(cell);
         });
+
+        const delBtn = document.createElement('button');
+        delBtn.style.backgroundColor = 'Red';
+        delBtn.style.padding = '8px 24px';
+        delBtn.style.color = '#FFFFFF';
+        delBtn.textContent = 'Delete';
+        delBtn.style.border = 'none';
+        delBtn.style.borderRadius = '4px';
+
+        delBtn.addEventListener('mouseenter', ()=>{
+            delBtn.style.backgroundColor = 'Maroon';
+        });
+
+        delBtn.addEventListener('mouseleave', ()=>{
+            delBtn.style.backgroundColor = 'Red';
+        });
+
+        row.appendChild(delBtn);
+
         tableBody.appendChild(row);
     });
 }
