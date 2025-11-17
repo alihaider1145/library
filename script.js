@@ -63,6 +63,7 @@ function displayBooks(){
         readBtn.textContent = (rowData.isRead ? "Read" : "Not Read");
 
         readBtn.addEventListener('click', ()=>{
+            rowData.isRead = !rowData.isRead;
             if(readBtn.textContent === 'Read'){
                 readBtn.textContent = 'Not Read';
             }
