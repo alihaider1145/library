@@ -26,13 +26,14 @@ const tableBody = document.querySelector('.library-table tbody')
 const form = document.querySelector('.library-form');
 const formBtn = document.querySelector('.formBtn');
 
-function Book(author, title, pages, isRead, ID){
-
-    this.author = author;
-    this.title = title;
-    this.pages = pages;
-    this.isRead = isRead;
-    this.ID = ID;
+class Book{
+    constructor(author, title, pages, isRead, ID){
+        this.author = author;
+        this.title = title;
+        this.pages = pages;
+        this.isRead = isRead;
+        this.ID = ID;
+    }
 }
 
 function addBookToLibrary(author, title, pages, isRead){
